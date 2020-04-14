@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/chat/lists.css">
+</head>
+<body>
+    <div class="main">
+        <div class="lists-head">
+            <div class="lists-words">消息</div>
+        </div>
+        <div class="lists-ul">
+            {foreach $data as $val}
+                <a class="lists-li display-block" href="/content/{$val.ChatId}/">
+                    <div class="lists-left left">
+                        <div class="lists-img">
+                            <img src="{$val.Avatar}">
+                        </div>
+                        {if $val.ChatNum > 0}
+                            <div class="lists-chatnum">{$val.ChatNum}</div>
+                        {/if}
+                    </div>
+                    <div class="lists-right right">
+                        <div class="lists-top">
+                            <div class="lists-name left">{$val.UserName}</div>
+                            <div class="lists-time right">{$val.CreateTime}</div>
+                        </div>
+                        <div class="lists-content">
+                            {$val.Content}
+                        </div>
+                    </div>
+                </a>
+            {/foreach}
+        </div>
+        <div class="footer">
+            <div class="footer-list">
+                <div class="footer-li">
+                    <a class="footer-a" href="/lists/">
+                        <img src="__STATIC__/img/common/news_select.png">
+                        <div class="footer-words footer-words-color">消息</div>
+                    </a>
+                </div>
+                <div class="footer-li">
+                    <a class="footer-a" href="/">
+                        <img src="__STATIC__/img/common/mail_list.png">
+                        <div class="footer-words">通讯录</div>
+                    </a>
+                </div>
+                <div class="footer-li">
+                    <a class="footer-a" href="/user/">
+                        <img src="__STATIC__/img/common/user.png">
+                        <div class="footer-words">我的</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__JS__/common/jquery-2.1.4.min.js"></script>
+    <script>
+        /** 公用常量 **/
+        var from_id = "{$from_id}"; //发送用户Id
+        /** 公用常量 **/
+    </script>
+    <script src="__JS__/chat/lists.js"></script>
+</body>
+</html>

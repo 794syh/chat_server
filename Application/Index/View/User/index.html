@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/user/user.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="user-head">
+            <div class="user-words">我的</div>
+        </div>
+        <div class="user-regin">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="{$data.Avatar}"/>
+                </div>
+                <div class="user-name">{$data.UserName}</div>
+            </div>
+            <div class="user-operation">
+                <button class="user-logout">退出登录</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-list">
+                <div class="footer-li">
+                    <a class="footer-a" href="/lists/">
+                        <img src="__STATIC__/img/common/news.png">
+                        <div class="footer-words">消息</div>
+                    </a>
+                </div>
+                <div class="footer-li">
+                    <a class="footer-a" href="/">
+                        <img src="__STATIC__/img/common/mail_list.png">
+                        <div class="footer-words">通讯录</div>
+                    </a>
+                </div>
+                <div class="footer-li">
+                    <a class="footer-a" href="/user/">
+                        <img src="__STATIC__/img/common/user_select.png">
+                        <div class="footer-words footer-words-color">我的</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__JS__/common/jquery-2.1.4.min.js"></script>
+    <script src="__JS__/user/user.js"></script>
+</body>
+</html>

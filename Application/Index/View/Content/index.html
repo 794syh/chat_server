@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/chat/content.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="index-head">
+            <div class="index-left-img left" onclick="history.back()">
+                <img src="__STATIC__/img/content/left-arrow.png"/>
+            </div>
+            <div class="index-words left">
+                {$to_info.UserName}
+                <span class="index-online"></span>
+            </div>
+            <div class="index-right-img right">
+                <img src="__STATIC__/img/content/more.png"/>
+            </div>
+        </div>
+        <div class="index-ul">
+            {if !empty($chat_record)}
+                {foreach $chat_record as $val}
+                    {if $val.Cate == 1}
+                        <div class="index-li-right display-block">
+                            <div class="index-img right">
+                                <img src="{$val.Avatar}"/>
+                            </div>
+                            <div class="index-right right">
+                                <div class="index-top">
+                                    <div class="index-time left">{$val.Time}</div>
+                                    <div class="index-name right">{$val.UserName}</div>
+                                </div>
+                                <div class="index-content">
+                                    {if $val.Type == 1}
+                                        {$val.Content}
+                                    {else}
+                                        <img src="{$val.Content}" />
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {else}
+                        <div class="index-li-left display-block">
+                            <div class="index-img left">
+                                <img src="{$val.Avatar}"/>
+                            </div>
+                            <div class="index-right left">
+                                <div class="index-top">
+                                    <div class="index-name left">{$val.UserName}</div>
+                                    <div class="index-time right">{$val.Time}</div>
+                                </div>
+                                <div class="index-content">
+                                    {if $val.Type == 1}
+                                        {$val.Content}
+                                    {else}
+                                        <img src="{$val.Content}" />
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+                {/foreach}
+            {/if}
+        </div>
+        <div class="index-footer">
+            <div class="index-main display-block">
+                <div class="index-left left">
+                    <input id="content_input"/>
+                </div>
+                <div class="index-right right">
+                    <div class="index-icon left" id="emotion">
+                        <img src="__STATIC__/img/content/qq-icon.png"/>
+                    </div>
+                    <div class="index-icon right">
+                        <div class="index-file">
+                            <img src="__STATIC__/img/content/cardhu.png"/>
+                            <input type="file" class="index-icon-file" id="index-file"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__JS__/common/jquery-2.1.4.min.js"></script>
+    <script src="__JS__/common/jquery.qqFace.js"></script>
+    <script>
+        /** 公用常量 **/
+        var from_id = "{$from_info.Id}", //发送用户Id
+            from_avatar = "{$from_info.Avatar}", //发送用户头像
+            from_name = "{$from_info.UserName}", //发送用户名称
+            to_id = "{$to_info.Id}", //接收用户Id
+            to_avatar = "{$to_info.Avatar}", //接收用户头像
+            to_name = "{$to_info.UserName}", //接收用户名称
+            online = "0"; //接收用户是否在线
+        /** 公用常量 **/
+    </script>
+    <script src="__JS__/chat/content.js"></script>
+</body>
+</html>

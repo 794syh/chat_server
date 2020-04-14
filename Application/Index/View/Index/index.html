@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/index.css"/>
+</head>
+<body>
+<div class="main">
+    <div class="index-head">
+        <div class="index-words">通讯录</div>
+    </div>
+    <div class="index-list">
+        <ul class="index-screen">
+            {foreach $screen as $val}
+                <li>{$val}</li>
+            {/foreach}
+        </ul>
+        <div class="index-friend">
+            {foreach $data as $val}
+                <div class="index-ul" id="hierarchy_{if $val.Hierarchy == '#'}XYZ{else}{$val.Hierarchy}{/if}">
+                    <div class="index-hierarchy">{$val.Hierarchy}</div>
+                    <div class="index-user">
+                        {foreach $val.List as $value}
+                            <a class="index-li" href="/content/{$value.Id}/">
+                                <div class="index-avatar">
+                                    <img src="{$value.Avatar}">
+                                </div>
+                                <div class="index-name">{$value.Name}</div>
+                            </a>
+                        {/foreach}
+                    </div>
+                </div>
+            {/foreach}
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-list">
+            <div class="footer-li">
+                <a class="footer-a" href="/lists/">
+                    <img src="__STATIC__/img/common/news.png">
+                    <div class="footer-words">消息</div>
+                </a>
+            </div>
+            <div class="footer-li">
+                <a class="footer-a" href="/">
+                    <img src="__STATIC__/img/common/mail_list_select.png">
+                    <div class="footer-words footer-words-color">通讯录</div>
+                </a>
+            </div>
+            <div class="footer-li">
+                <a class="footer-a" href="/user/">
+                    <img src="__STATIC__/img/common/user.png">
+                    <div class="footer-words">我的</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__JS__/common/jquery-2.1.4.min.js"></script>
+<script src="__JS__/index/index.js"></script>
+</body>
+</html>

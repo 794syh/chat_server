@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/login/register.css">
+</head>
+<body>
+<div class="main">
+    <div class="register">
+        <div class="register-region">
+            <div class="register-head">
+                注册
+            </div>
+            <div class="register-input">
+                <div class="register-words left">用户名<span></span></div>
+                <input type="text" class="right" id="user_name" placeholder="请输入用户名" maxlength="11"/>
+            </div>
+            <div class="register-input">
+                <div class="register-words left">密码<span></span></div>
+                <input type="password" class="right" id="password" placeholder="请输入密码"/>
+            </div>
+            <div class="register-input">
+                <div class="register-words left">手机号<span></span></div>
+                <input type="text" class="right" id="mobile" placeholder="请输入手机号" maxlength="11"/>
+            </div>
+            <div class="register-input">
+                <div class="register-words left">验证码<span></span></div>
+                <div class="register-code right">
+                    <input type="text" class="code-input left" id="code" placeholder="请输入验证码" maxlength="4"/>
+                    <div class="code-button right">
+                        <img src="{:captcha_src()}" id="code_img" class="reloadverify">
+                    </div>
+                </div>
+            </div>
+            <div class="register-input">
+                <div class="register-words left">邮箱<span></span></div>
+                <input type="text" class="right" id="email" placeholder="请输入邮箱"/>
+            </div>
+            <div class="register-register">
+                <a href="/login/">账号登录</a>
+            </div>
+            <div class="register-button">
+                <button id="register_submit">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__JS__/common/jquery-2.1.4.min.js"></script>
+<script src="__JS__/common/jsencrypt.min.js"></script>
+<script type="application/javascript">
+    var register_time = "{$register_time}";
+</script>
+<script src="__JS__/login/code.js"></script>
+<script src="__JS__/login/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkPHP + Workerman 在线聊天系统</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/login/login.css">
+</head>
+<body>
+    <div class="main">
+        <div class="login">
+            <div class="login-region">
+                <div class="login-head">
+                    登录
+                </div>
+                <div class="login-input">
+                    <div class="login-words left">手机号<span></span></div>
+                    <input type="text" class="right" id="mobile" placeholder="请输入手机号" maxlength="11"/>
+                </div>
+                <div class="login-input">
+                    <div class="login-words left">密码<span></span></div>
+                    <input type="password" class="right" id="password" placeholder="请输入密码"/>
+                </div>
+                <div class="login-input">
+                    <div class="login-words left">验证码<span></span></div>
+                    <div class="login-code right">
+                        <input type="text" class="code-input left" id="code" placeholder="请输入验证码" maxlength="4"/>
+                        <div class="code-button right">
+                            <img src="{:captcha_src()}" id="code_img" class="reloadverify">
+                        </div>
+                    </div>
+                </div>
+                <div class="login-register">
+                    <a href="/register/">没在账号？注册</a>
+                </div>
+                <div class="login-button">
+                    <button id="login_submit">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__JS__/common/jquery-2.1.4.min.js"></script>
+    <script src="__JS__/common/jsencrypt.min.js"></script>
+    <script type="application/javascript">
+        var login_time = "{$login_time}";
+    </script>
+    <script src="__JS__/login/code.js"></script>
+    <script src="__JS__/login/login.js"></script>
+</body>
+</html>
