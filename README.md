@@ -41,4 +41,4 @@ debug和daemon方式区别
 ![avatar](public/upload/effect_picture/content.jpg)
 
 
-######特此鸣谢 ThinkPHP和Workerman框架开发团队所提供的开源开发框架
+特此鸣谢 ThinkPHP和Workerman框架开发团队所提供的开源开发框架
