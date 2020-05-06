@@ -105,14 +105,4 @@ G2ge5x0/KMqwCK5FJtFttQR5GuFlEO2D6BEopQJueX7AfA2parw/oDA=
         openssl_public_encrypt($data, $public_encode, self::$public_key);
         return empty($public_encode) ? false : base64_encode($public_encode);
     }
-
-    /**
-     * js版本RSA加密中：n，e
-     */
-    public static function get_public_js_ne()
-    {
-        $res = openssl_pkey_get_public(self::$public_key);
-        $rsa_detail = openssl_pkey_get_details($res)['rsa'];
-        pre(['n' => base64_encode($rsa_detail['n']), 'e' => base64_encode($rsa_detail['e'])]);
-    }
 }
