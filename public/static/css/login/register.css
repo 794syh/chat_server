@@ -1,0 +1,113 @@
+/** register.css **/
+.main {
+    width: 500px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.register {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.register .register-region {
+    position: absolute;
+    width: 500px;
+    height: 620px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: #F5F5F5 0 5px 10px 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.register .register-region .register-head {
+    width: 500px;
+    height: auto;
+    color: #333333;
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.register .register-region .register-input {
+    width: 400px;
+    height: 46px;
+    padding: 16px 0;
+    margin: 0 50px;
+}
+
+.register .register-region .register-input .register-words {
+    width: 50px;
+    height: 46px;
+    line-height: 46px;
+    color: #333333;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.register .register-region .register-input .register-words span {
+    display: inline-block;
+    padding-left: 100%;
+}
+
+.register .register-region .register-input input {
+    width: 310px;
+    height: 42px;
+    color: #333333;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.register .register-region .register-code {
+    width: 334px;
+    height: 46px;
+    color: #333333;
+    font-size: 16px;
+}
+
+.register .register-region .register-code .code-input {
+    width: 150px;
+    height: 42px;
+    padding: 0 10px;
+}
+
+.register .register-region .register-code .code-button {
+    width: 120px;
+    height: 46px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #de2c2c;
+    cursor: pointer;
+    border: 0;
+}
+
+.register .register-region .register-register {
+    width: 400px;
+    height: auto;
+    color: #de2c2c;
+    font-size: 14px;
+    padding: 16px 0;
+    margin: 0 50px;
+    text-align: right;
+}
+
+.register .register-region .register-button {
+    width: 400px;
+    height: 46px;
+    padding: 16px 0;
+    margin: 0 50px;
+}
+
+.register .register-region .register-button button {
+    width: 400px;
+    height: 46px;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #de2c2c;
+    cursor: pointer;
+    border: 0;
+}

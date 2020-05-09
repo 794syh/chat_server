@@ -1,0 +1,31 @@
+/** common.css **/
+body {
+    font-size: 14px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #cf1717;
+}
+
+h3 a:hover, h4 a:hover {
+    transition: color .3s ease-in;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.display-block {
+    display: inline-block;
+}

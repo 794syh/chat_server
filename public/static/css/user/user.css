@@ -1,0 +1,80 @@
+.main {
+    width: 500px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.user-head {
+    position: fixed;
+    display: flex;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: #e9e9e9;
+    top: 0;
+}
+
+.user-head .user-words {
+    width: 500px;
+    height: auto;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+}
+
+.user-regin {
+    display: inline-block;
+    width: 500px;
+    height: auto;
+    margin: 42px auto 62px;
+}
+
+.user-regin .user-info {
+    display: inline-block;
+    width: 500px;
+    height: 160px;
+    background-color: #f9f9f9;
+}
+
+.user-regin .user-info .user-avatar {
+    display: inline-block;
+    width: 140px;
+    height: 160px;
+    float: left;
+}
+
+.user-regin .user-info .user-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 30px 20px;
+}
+
+.user-regin .user-info .user-name {
+    display: inline-block;
+    width: 200px;
+    height: 24px;
+    color: #333333;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 68px 0;
+    float: left;
+}
+
+.user-regin .user-operation {
+    width: 500px;
+    height: auto;
+}
+
+.user-regin .user-operation .user-logout {
+    width: 500px;
+    height: auto;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #de2c2c;
+    padding: 20px 0;
+    margin: 40px 0;
+}

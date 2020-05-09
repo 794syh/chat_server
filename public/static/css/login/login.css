@@ -1,0 +1,113 @@
+/** login.css **/
+.main {
+    width: 500px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.login {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.login .login-region {
+    position: absolute;
+    width: 500px;
+    height: 460px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: #F5F5F5 0 5px 10px 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login .login-region .login-head {
+    width: 500px;
+    height: auto;
+    color: #333333;
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.login .login-region .login-input {
+    width: 400px;
+    height: 46px;
+    padding: 16px 0;
+    margin: 0 50px;
+}
+
+.login .login-region .login-input .login-words {
+    width: 50px;
+    height: 46px;
+    line-height: 46px;
+    color: #333333;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.login .login-region .login-input .login-words span {
+    display: inline-block;
+    padding-left: 100%;
+}
+
+.login .login-region .login-input input {
+    width: 310px;
+    height: 42px;
+    color: #333333;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.login .login-region .login-code {
+    width: 334px;
+    height: 46px;
+    color: #333333;
+    font-size: 16px;
+}
+
+.login .login-region .login-code .code-input {
+    width: 150px;
+    height: 42px;
+    padding: 0 10px;
+}
+
+.login .login-region .login-code .code-button {
+    width: 120px;
+    height: 46px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #de2c2c;
+    cursor: pointer;
+    border: 0;
+}
+
+.login .login-region .login-register {
+    width: 400px;
+    height: auto;
+    color: #de2c2c;
+    font-size: 14px;
+    padding: 16px 0;
+    margin: 0 50px;
+    text-align: right;
+}
+
+.login .login-region .login-button {
+    width: 400px;
+    height: 46px;
+    padding: 16px 0;
+    margin: 0 50px;
+}
+
+.login .login-region .login-button button {
+    width: 400px;
+    height: 46px;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #de2c2c;
+    cursor: pointer;
+    border: 0;
+}
